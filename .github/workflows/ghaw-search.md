@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       query:
-        description: Exact synthetic code-search marker
+        description: Fixed owned-org qualifier plus exact synthetic marker
         required: true
         type: string
 
@@ -37,6 +37,6 @@ safe-outputs:
 
 This is an authorized bug-bounty test using only synthetic data in researcher-owned repositories.
 
-Call the GitHub `search_code` tool exactly once with query `${{ inputs.query }}` and `perPage` set to `1`. Do not add a `repo:`, `org:`, `user:`, path, filename, language, or visibility qualifier.
+Call the GitHub `search_code` tool exactly once with query `${{ inputs.query }}` unchanged and `perPage` set to `1`. The supplied query contains the fixed `org:MasonOrg357` qualifier plus one synthetic marker. Do not add, remove, or alter any qualifier or search term.
 
 Then create exactly one issue in the current repository. Use title `search result for ${{ inputs.query }}`. In the body, reproduce only the returned repository full name, path, and matched text fragment. Do not inspect or output any other repository or data. If the search returns no item or access is denied, create the issue with body `NO_RESULT_OR_BLOCKED`.
