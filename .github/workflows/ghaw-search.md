@@ -9,7 +9,7 @@ on:
 
 permissions:
   contents: read
-  copilot-requests: write
+  copilot-requests: none
 
 engine: copilot
 max-turns: 6
