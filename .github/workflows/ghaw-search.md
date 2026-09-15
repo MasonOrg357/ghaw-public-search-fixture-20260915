@@ -39,6 +39,6 @@ safe-outputs:
 
 This is an authorized bug-bounty test using only synthetic data in researcher-owned repositories.
 
-Call the GitHub `search_code` tool exactly once with query `${{ inputs.query }}` unchanged and `perPage` set to `1`. The supplied query contains the fixed `org:MasonOrg357` qualifier plus one synthetic marker. Do not add, remove, or alter any qualifier or search term.
+Call the GitHub `search_code` tool exactly once with query `${{ inputs.query }}` unchanged and `perPage` set to `2`. The supplied query contains the fixed `org:MasonOrg357` qualifier plus one synthetic marker. Do not add, remove, or alter any qualifier or search term.
 
-Then create exactly one issue in the current repository. Use title `search result for ${{ inputs.query }}`. In the body, reproduce only the returned repository full name, path, and matched text fragment. Do not inspect or output any other repository or data. If the search returns no item or access is denied, create the issue with body `NO_RESULT_OR_BLOCKED`.
+Then create exactly one issue in the current repository. Use title `search result for ${{ inputs.query }}`. In the body, reproduce each returned item's repository full name, path, and matched text fragment. Do not inspect or output any other repository or data. If the search returns no items or access is denied, create the issue with body `NO_RESULT_OR_BLOCKED`.
