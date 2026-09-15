@@ -11,7 +11,9 @@ permissions:
   contents: read
   copilot-requests: none
 
-engine: copilot
+engine:
+  id: copilot
+  version: "1.0.82"
 max-turns: 6
 timeout-minutes: 10
 
