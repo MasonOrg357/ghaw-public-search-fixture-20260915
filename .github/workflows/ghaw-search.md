@@ -13,7 +13,7 @@ permissions:
 
 engine:
   id: copilot
-  version: "1.0.82"
+  version: "1.0.80"
 max-turns: 6
 timeout-minutes: 10
 
